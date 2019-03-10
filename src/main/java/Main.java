@@ -15,7 +15,7 @@ public class Main extends JFrame{
   int x = 0;
 
   public Main(){
-    super("Learn Box");
+    super("Learning box");
     pic = new JLabel();
     pic.setBounds(0, 0, 300, 200);
 

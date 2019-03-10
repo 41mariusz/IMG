@@ -15,14 +15,14 @@ public class Main extends JFrame{
   int x = 0;
 
   public Main(){
-    super("Java SlideShow");
+    super("Learn Box");
     pic = new JLabel();
     pic.setBounds(0, 0, 300, 200);
 
     //Call The Function SetImageSize
     SetImageSize(thumbs.length-1);
     //set a timer
-    tm = new Timer(1000,new ActionListener() {
+    tm = new Timer(1000*90,new ActionListener() { // <- HERE SET TIME
 
       @Override
       public void actionPerformed(ActionEvent e) {
@@ -42,7 +42,7 @@ public class Main extends JFrame{
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     setVisible(true);
   }
-  //create a function to resize the image
+
   public void SetImageSize(int i){
     ImageIcon icon = getRandomThumbIcon();
     Image img = icon.getImage();
@@ -62,7 +62,6 @@ public class Main extends JFrame{
   }
 
   private static ImageIcon getRandomThumbIcon() {
-//        TODO: compile /thumbs/ in jar file
     return new ImageIcon(thumbs[new Random().nextInt(thumbs.length)].getAbsolutePath());
   }
 }

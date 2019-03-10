@@ -1,4 +1,4 @@
-# IMG
+# About Learning Box
 
 This program was created for learning.
 Displays photos added in a random way.
